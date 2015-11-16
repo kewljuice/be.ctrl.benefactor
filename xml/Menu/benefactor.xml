@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/ctrl/benefactor</path>
+    <page_callback>CRM_benefactor_Page_benefactor</page_callback>
+    <title>benefactor</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>
+
