@@ -110,6 +110,24 @@ function benefactor_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
 }
 
 /**
+ * @param $angularModule
+ */
+function benefactor_civicrm_angularModules(&$angularModule) {
+	// https://github.com/civicrm/civicrm-core/tree/master/tools/extensions/org.civicrm.angularex
+  $angularModule['example'] = array(
+    'ext' => 'be.ctrl.benefactor',
+    'js' => array('js/example.js'),
+    'partials' => array('partials'),
+  );
+	
+	$angularModule['script'] = array(
+    'ext' => 'be.ctrl.benefactor',
+    'js' => array('js/script.js'),
+    'partials' => array('partials'),
+  );
+}
+
+/**
  * buildform
  */
 function benefactor_civicrm_buildForm($formName, &$form) {
@@ -124,7 +142,7 @@ function benefactor_civicrm_pageRun( &$page ) {
 	if(get_class($page) == 'CRM_benefactor_Page_benefactor') {
 		// include script
 		//CRM_Core_Resources::singleton()->addScriptUrl('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js', 10, 'page-header');
-		CRM_Core_Resources::singleton()->addScriptFile('be.ctrl.benefactor', 'js/script.js', 10, 'page-footer');
+		//CRM_Core_Resources::singleton()->addScriptFile('be.ctrl.benefactor', 'js/script.js', 10, 'page-footer');
 	}
 }
 
