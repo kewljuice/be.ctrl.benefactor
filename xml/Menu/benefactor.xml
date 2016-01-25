@@ -3,8 +3,14 @@
     <item>
         <path>civicrm/ctrl/benefactor</path>
         <page_callback>CRM_benefactor_Page_benefactor</page_callback>
-        <title>benefactor</title>
+        <title>Benefactor</title>
         <access_arguments>access CiviCRM</access_arguments>
         <is_public>true</is_public>
+    </item>
+    <item>
+        <path>civicrm/ctrl/benefactor/admin</path>
+        <page_callback>CRM_benefactor_Page_benefactor_admin</page_callback>
+        <title>Benefactor Administration</title>
+        <access_arguments>access CiviCRM</access_arguments>
     </item>
 </menu>
