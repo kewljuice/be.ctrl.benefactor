@@ -1,23 +1,23 @@
 {* Display a variable directly *}
 <div>
 
-	<!-- content -->
-	<h3>Benefactor ({$url})</h3>
-	{$content} 
-  <hr>
-  
-  <!-- literal -->
-  {literal} no smarty code {hello} {/literal}
+    <!-- content -->
+    <h3>Benefactor ({$url})</h3>
+    {$content}
+    <hr>
 
-  
-  <!-- apply our angular app -->
-  <div class="container" ng-app="validationApp">
+    <!-- literal -->
+    {literal} no smarty code {hello} {/literal}
 
-		[[ name ]]
-	
-		<!-- views will be injected here -->
-    <div ui-view></div>
- 
-  </div>
+
+    <!-- apply our angular app -->
+    <div class="container" ng-app="validationApp">
+
+        [[ name ]]
+
+        <!-- views will be injected here -->
+        <div ui-view></div>
+
+    </div>
 
 </div>

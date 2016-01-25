@@ -2,23 +2,23 @@
  * Angular example
  */
 
-(function(angular, $, _) {
-	
-  // var resourceUrl = CRM.resourceUrls['be.ctrl.benefactor'];
-  var bModule = angular.module('example', ['ngRoute', 'crmResource']);
+(function (angular, $, _) {
 
-  bModule.config(['$routeProvider',
-    function($routeProvider) {
-      $routeProvider.when('/example', {
-        templateUrl: '~/example/example.html',
-        controller: 'ExampleCtrl'
-      });
-    }
-  ]);
+    // var resourceUrl = CRM.resourceUrls['be.ctrl.benefactor'];
+    var bModule = angular.module('example', ['ngRoute', 'crmResource']);
 
-  bModule.controller('ExampleCtrl', function($scope) {
-    $scope.name = 'world';
-    $scope.ts = CRM.ts('be.ctrl.benefactor');
-  });
+    bModule.config(['$routeProvider',
+        function ($routeProvider) {
+            $routeProvider.when('/example', {
+                templateUrl: '~/example/example.html',
+                controller: 'ExampleCtrl'
+            });
+        }
+    ]);
+
+    bModule.controller('ExampleCtrl', function ($scope) {
+        $scope.name = 'world';
+        $scope.ts = CRM.ts('be.ctrl.benefactor');
+    });
 
 })(angular, CRM.$, CRM._);

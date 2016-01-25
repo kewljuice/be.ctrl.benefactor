@@ -46,7 +46,7 @@ function benefactor_civicrm_uninstall() {
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_enable
  */
 function benefactor_civicrm_enable() {
-	// continue
+  // continue
   _benefactor_civix_civicrm_enable();
 }
 
@@ -57,7 +57,7 @@ function benefactor_civicrm_enable() {
  */
 function benefactor_civicrm_disable() {
   // continue
-	_benefactor_civix_civicrm_disable();
+  _benefactor_civix_civicrm_disable();
 }
 
 /**
@@ -113,14 +113,14 @@ function benefactor_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
  * @param $angularModule
  */
 function benefactor_civicrm_angularModules(&$angularModule) {
-	// https://github.com/civicrm/civicrm-core/tree/master/tools/extensions/org.civicrm.angularex
+  // https://github.com/civicrm/civicrm-core/tree/master/tools/extensions/org.civicrm.angularex
   $angularModule['example'] = array(
     'ext' => 'be.ctrl.benefactor',
     'js' => array('js/example.js'),
     'partials' => array('partials'),
   );
-	
-	$angularModule['script'] = array(
+
+  $angularModule['script'] = array(
     'ext' => 'be.ctrl.benefactor',
     'js' => array('js/script.js'),
     'partials' => array('partials'),
@@ -131,19 +131,19 @@ function benefactor_civicrm_angularModules(&$angularModule) {
  * buildform
  */
 function benefactor_civicrm_buildForm($formName, &$form) {
-	// set buildForm
+  // set buildForm
 }
 
 /**
  * pagerun
  */
-function benefactor_civicrm_pageRun( &$page ) {
-	// pageRun
-	if(get_class($page) == 'CRM_benefactor_Page_benefactor') {
-		// include script
-		//CRM_Core_Resources::singleton()->addScriptUrl('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js', 10, 'page-header');
-		//CRM_Core_Resources::singleton()->addScriptFile('be.ctrl.benefactor', 'js/script.js', 10, 'page-footer');
-	}
+function benefactor_civicrm_pageRun(&$page) {
+  // pageRun
+  if (get_class($page) == 'CRM_benefactor_Page_benefactor') {
+    // include script
+    //CRM_Core_Resources::singleton()->addScriptUrl('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js', 10, 'page-header');
+    //CRM_Core_Resources::singleton()->addScriptFile('be.ctrl.benefactor', 'js/script.js', 10, 'page-footer');
+  }
 }
 
  
