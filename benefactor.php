@@ -136,8 +136,10 @@ function benefactor_civicrm_pageRun(&$page) {
   // pageRun
   if (get_class($page) == 'CRM_benefactor_Page_benefactor') {
     // include script
-    //CRM_Core_Resources::singleton()->addScriptUrl('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js', 10, 'page-header');
-    //CRM_Core_Resources::singleton()->addScriptFile('be.ctrl.benefactor', 'js/script.js', 10, 'page-footer');
+    CRM_Core_Resources::singleton()
+      ->addScriptUrl('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js', 10, 'page-header');
+    CRM_Core_Resources::singleton()
+      ->addScriptFile('be.ctrl.benefactor', 'script/benefactor.js', 10, 'page-footer');
   }
 }
 
