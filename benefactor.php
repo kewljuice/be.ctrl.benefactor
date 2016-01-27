@@ -1,6 +1,7 @@
 <?php
 
 require_once 'benefactor.civix.php';
+require_once 'php/hooks.php';
 
 /**
  * Implementation of hook_civicrm_config
@@ -117,12 +118,6 @@ function benefactor_civicrm_angularModules(&$angularModule) {
   $angularModule['example'] = array(
     'ext' => 'be.ctrl.benefactor',
     'js' => array('js/example.js'),
-    'partials' => array('partials'),
-  );
-
-  $angularModule['script'] = array(
-    'ext' => 'be.ctrl.benefactor',
-    'js' => array('js/script.js'),
     'partials' => array('partials'),
   );
 }
