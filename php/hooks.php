@@ -10,7 +10,7 @@ function benefactor_civicrm_navigationMenu(&$params)
     $AdministerKey = '';
     foreach ($params as $k => $v) {
         if ($v['attributes']['name'] == 'Administer') {
-            $AdministerKey = $v['attributes']['navID'];
+            $AdministerKey = $k;
         }
     }
     // Check for Parent navID.
