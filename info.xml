@@ -22,6 +22,6 @@
     </compatibility>
     <comments></comments>
     <civix>
-        <namespace>CRM/benefactor</namespace>
+        <namespace>CRM/ctrl/benefactor</namespace>
     </civix>
 </extension>
